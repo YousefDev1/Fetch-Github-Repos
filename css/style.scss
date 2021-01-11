@@ -1,0 +1,200 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root{
+    --padding-xl: 220px;
+    --padding-lg: 150px;
+    --padding-md: 100px;
+    --padding-sm: 30px;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    padding-left: 250px;
+    padding-right: 250px;
+    padding-top: 50px;
+    padding-bottom: 80px;
+
+    .container__header{
+        margin: 10px;
+        background-color: none;
+        width: 100%;
+        padding: 10px 20px;
+        display: flex;
+
+        input{
+            background-color: #9ba4b4;
+            border: none;
+            outline: none;
+            margin: 5px;
+            font-size: 25px;
+            padding: 10px;
+            color: white;
+            letter-spacing: 0.3px;
+            width: 100%;
+
+            &::placeholder{
+                color: #f1f1f1;
+            }
+        }
+
+        button{
+            margin-left: auto;
+            background-color: #394867;
+            padding: 10px;
+            margin: 5px;
+            border: none;
+            outline: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+
+            &:hover{
+                background-color: #596b91;
+            }
+        }
+    }
+
+    .container__content{
+        padding: 10px 20px;
+        margin: 10px;
+        width: 100% ;
+
+        .show-repos{
+            margin: 5px;
+
+            .empty{
+                width: 100%;
+                background-color: #394867;
+                padding: 10px;
+                color: white;
+                font-size: 20px;
+                display: flex;
+                align-items: center;
+            }
+            
+            .repo{
+                width: 100%;
+                background-color: #394867;
+                padding: 10px;
+                color: white;
+                font-size: 20px;
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+
+                .repo-data{
+                    margin-left: auto;
+                    display: flex;
+                    align-items: center;
+
+                    .stars,
+                    .forks{
+                        background-color: #9ba4b4;
+                        font-size: 15px;
+                        padding: 5px 10px;
+                        border-radius: 2px;
+                        margin-right: 10px;
+                        display: flex;
+                        align-items: center;
+
+                        span{
+                            margin-right: 10px;
+                        }
+                    }
+
+                    .visit{
+                        background-color: #9ba4b4;
+                        padding: 5px 10px;
+                        border-radius: 2px;
+                        margin-right: 10px;
+                        text-decoration: none;
+                        color: white;
+                        user-select: none;
+                        -moz-user-select: none;
+                        -webkit-user-select: none;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #394867;
+    color: white;
+    margin-top: 300px;
+    padding: 10px 250px;
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.4px;
+
+    .linkes{
+        margin-left: auto;
+        display: flex;
+        padding: 10px;
+        font-size: 20px;
+
+        div{
+            margin: 5px;
+            a{
+                color: white;
+                transition: 0.3s;
+                &:hover{
+                    color: #9ba4b4;
+                }
+            }
+        }
+        
+    }
+
+}
+
+@media(max-width: 1220px)
+{
+    .container,
+    .footer{
+        padding-left: calc(var(--padding-lg) - 100px);
+        padding-right: calc(var(--padding-lg) - 100px);
+    }
+}
+
+@media(max-width: 1000px)
+{
+    .container,
+    .footer{
+        padding-left: px;
+        padding-right: 80px;
+    }
+}
+
+@media(max-width: 700px)
+{
+    .container,
+    .footer{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media(max-width: 400px)
+{
+    .container,
+    .footer{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

@@ -1,0 +1,236 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+:root {
+  --padding-xl: 220px;
+  --padding-lg: 150px;
+  --padding-md: 100px;
+  --padding-sm: 30px;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding-left: 250px;
+  padding-right: 250px;
+  padding-top: 50px;
+  padding-bottom: 80px;
+}
+
+.container .container__header {
+  margin: 10px;
+  background-color: none;
+  width: 100%;
+  padding: 10px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .container__header input {
+  background-color: #9ba4b4;
+  border: none;
+  outline: none;
+  margin: 5px;
+  font-size: 25px;
+  padding: 10px;
+  color: white;
+  letter-spacing: 0.3px;
+  width: 100%;
+}
+
+.container .container__header input::-webkit-input-placeholder {
+  color: #f1f1f1;
+}
+
+.container .container__header input:-ms-input-placeholder {
+  color: #f1f1f1;
+}
+
+.container .container__header input::-ms-input-placeholder {
+  color: #f1f1f1;
+}
+
+.container .container__header input::placeholder {
+  color: #f1f1f1;
+}
+
+.container .container__header button {
+  margin-left: auto;
+  background-color: #394867;
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.container .container__header button:hover {
+  background-color: #596b91;
+}
+
+.container .container__content {
+  padding: 10px 20px;
+  margin: 10px;
+  width: 100%;
+}
+
+.container .container__content .show-repos {
+  margin: 5px;
+}
+
+.container .container__content .show-repos .empty {
+  width: 100%;
+  background-color: #394867;
+  padding: 10px;
+  color: white;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .container__content .show-repos .repo {
+  width: 100%;
+  background-color: #394867;
+  padding: 10px;
+  color: white;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+}
+
+.container .container__content .show-repos .repo .repo-data {
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .container__content .show-repos .repo .repo-data .stars,
+.container .container__content .show-repos .repo .repo-data .forks {
+  background-color: #9ba4b4;
+  font-size: 15px;
+  padding: 5px 10px;
+  border-radius: 2px;
+  margin-right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .container__content .show-repos .repo .repo-data .stars span,
+.container .container__content .show-repos .repo .repo-data .forks span {
+  margin-right: 10px;
+}
+
+.container .container__content .show-repos .repo .repo-data .visit {
+  background-color: #9ba4b4;
+  padding: 5px 10px;
+  border-radius: 2px;
+  margin-right: 10px;
+  text-decoration: none;
+  color: white;
+  -ms-user-select: none;
+      user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  cursor: pointer;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #394867;
+  color: white;
+  margin-top: 300px;
+  padding: 10px 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 0.4px;
+}
+
+.footer .linkes {
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.footer .linkes div {
+  margin: 5px;
+}
+
+.footer .linkes div a {
+  color: white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.footer .linkes div a:hover {
+  color: #9ba4b4;
+}
+
+@media (max-width: 1220px) {
+  .container,
+  .footer {
+    padding-left: calc(var(--padding-lg) - 100px);
+    padding-right: calc(var(--padding-lg) - 100px);
+  }
+}
+
+@media (max-width: 1000px) {
+  .container,
+  .footer {
+    padding-left: px;
+    padding-right: 80px;
+  }
+}
+
+@media (max-width: 700px) {
+  .container,
+  .footer {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .container,
+  .footer {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
